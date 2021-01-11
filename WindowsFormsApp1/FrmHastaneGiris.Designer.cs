@@ -32,7 +32,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_bilgiIslem = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -85,18 +85,18 @@
             this.label1.Text = "\r\n";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // button1
+            // btn_bilgiIslem
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(223, 131);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 26);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Bilgi İşlem";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btn_bilgiIslem.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_bilgiIslem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_bilgiIslem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_bilgiIslem.Location = new System.Drawing.Point(223, 131);
+            this.btn_bilgiIslem.Name = "btn_bilgiIslem";
+            this.btn_bilgiIslem.Size = new System.Drawing.Size(80, 26);
+            this.btn_bilgiIslem.TabIndex = 6;
+            this.btn_bilgiIslem.Text = "Bilgi İşlem";
+            this.btn_bilgiIslem.UseVisualStyleBackColor = false;
+            this.btn_bilgiIslem.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
@@ -117,7 +117,7 @@
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(527, 289);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_bilgiIslem);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -137,7 +137,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_bilgiIslem;
         private System.Windows.Forms.Button button2;
     }
 }

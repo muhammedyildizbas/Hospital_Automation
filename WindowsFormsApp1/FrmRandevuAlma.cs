@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form9 : Form
+    public partial class FrmRandevuAlma : Form
     {
-        public Form9()
+        public FrmRandevuAlma()
         {
             InitializeComponent();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

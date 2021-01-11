@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form4 : Form
+    public partial class FrmBilgiIslemKullanici : Form
     {
-        public Form4()
+        public FrmBilgiIslemKullanici()
         {
             InitializeComponent();
-        }
-
-        private void Form4_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

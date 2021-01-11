@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form10
+    partial class FrmIlacVerme
     {
         /// <summary>
         /// Required designer variable.
