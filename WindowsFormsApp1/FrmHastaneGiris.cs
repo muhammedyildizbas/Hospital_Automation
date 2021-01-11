@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class FrmHastaneGiris : Form
     {
-        public Form1()
+        public FrmHastaneGiris()
         {
             InitializeComponent();
         }
@@ -39,7 +39,20 @@ namespace WindowsFormsApp1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            FrmBilgiIslemGiris frmBilgiIslemGiris = new FrmBilgiIslemGiris();
+            frmBilgiIslemGiris.Show();
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmKullaniciGiris frmKullanici = new FrmKullaniciGiris();
+            frmKullanici.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmDoktorGiris frmDoktorGiris = new FrmDoktorGiris();
+            frmDoktorGiris.Show();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class FrmHastaneGiris
     {
         /// <summary>
         ///Gerekli tasarımcı değişkeni.
@@ -47,6 +47,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Doktor";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label3
             // 
@@ -109,8 +110,9 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Hasta Girişi";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Form1
+            // FrmHastaneGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -123,7 +125,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.Name = "Form1";
+            this.Name = "FrmHastaneGiris";
             this.RightToLeftLayout = true;
             this.Text = "Hastane Giriş Ekranı";
             this.Load += new System.EventHandler(this.Form1_Load);

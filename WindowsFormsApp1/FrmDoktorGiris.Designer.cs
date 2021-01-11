@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class FrmKullaniciGiris
+    partial class FrmDoktorGiris
     {
         /// <summary>
         /// Required designer variable.
@@ -37,50 +37,50 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(181, 93);
+            this.textBox2.Location = new System.Drawing.Point(182, 103);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(153, 20);
-            this.textBox2.TabIndex = 14;
+            this.textBox2.TabIndex = 22;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(29, 93);
+            this.label2.Location = new System.Drawing.Point(30, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 18);
-            this.label2.TabIndex = 13;
+            this.label2.TabIndex = 21;
             this.label2.Text = "Şifre:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(181, 48);
+            this.textBox1.Location = new System.Drawing.Point(182, 58);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(153, 20);
-            this.textBox1.TabIndex = 12;
+            this.textBox1.TabIndex = 20;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(29, 50);
+            this.label1.Location = new System.Drawing.Point(30, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 18);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "TcKimlik No:";
+            this.label1.Size = new System.Drawing.Size(108, 18);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "T.C. Kimlik No:";
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(268, 131);
+            this.button2.Location = new System.Drawing.Point(269, 140);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(66, 25);
-            this.button2.TabIndex = 27;
+            this.button2.TabIndex = 28;
             this.button2.Text = "Giriş";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // FrmKullaniciGiris
+            // FrmDoktorGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -90,8 +90,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Name = "FrmKullaniciGiris";
-            this.Text = "Kullanıcı Girişi";
+            this.Name = "FrmDoktorGiris";
+            this.Text = "Doktor Giriş";
             this.ResumeLayout(false);
             this.PerformLayout();
 
