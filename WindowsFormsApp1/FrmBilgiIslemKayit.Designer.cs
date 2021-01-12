@@ -91,7 +91,7 @@
             // 
             // TxtBlgIslemTel
             // 
-            this.TxtBlgIslemTel.Location = new System.Drawing.Point(174, 159);
+            this.TxtBlgIslemTel.Location = new System.Drawing.Point(175, 285);
             this.TxtBlgIslemTel.Name = "TxtBlgIslemTel";
             this.TxtBlgIslemTel.Size = new System.Drawing.Size(153, 20);
             this.TxtBlgIslemTel.TabIndex = 75;
@@ -110,7 +110,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(23, 158);
+            this.label9.Location = new System.Drawing.Point(24, 284);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(100, 18);
             this.label9.TabIndex = 72;
@@ -122,7 +122,7 @@
             this.CmbCinsiyet.Items.AddRange(new object[] {
             "Kadın",
             "Erkek"});
-            this.CmbCinsiyet.Location = new System.Drawing.Point(175, 284);
+            this.CmbCinsiyet.Location = new System.Drawing.Point(172, 158);
             this.CmbCinsiyet.Name = "CmbCinsiyet";
             this.CmbCinsiyet.Size = new System.Drawing.Size(91, 21);
             this.CmbCinsiyet.TabIndex = 66;
@@ -131,7 +131,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(26, 287);
+            this.label5.Location = new System.Drawing.Point(23, 161);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 18);
             this.label5.TabIndex = 65;

@@ -56,5 +56,37 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            string kayit = "SELECT * from Kullanicilar where TcNo=@TcNo";
+            //tcno parametresine bağlı olarak kullanıcı bilgilerini çeken sql kodu
+            SqlCommand komut2 = new SqlCommand(kayit, baglanti);
+            komut2.Parameters.AddWithValue("TcNo", TxtTc.Text);
+            //tcno parametremize textbox'dan girilen değeri aktarıyoruz
+            SqlDataAdapter da = new SqlDataAdapter(komut2);
+            SqlDataReader dr = komut2.ExecuteReader();
+            if (dr.Read()) //Sadece tek bir kayıt döndürüleceği için while kullanmadım.
+            {
+                TxtTc.Text = dr["TcNo"].ToString();
+                TxtHstAd.Text = dr["Adi"].ToString();
+                TxtHstSoyad.Text = dr["Soyadi"].ToString();
+                TxtHstDgmYer.Text = dr["DogumYeri"].ToString();
+                CmbCinsiyet.Text = dr["Cinsiyet"].ToString();
+                dateTimePicker1.Text = dr["DogumTarihi"].ToString();
+                TxtHstBabaAd.Text = dr["BabaAdi"].ToString();
+                TxtHstAnneAd.Text = dr["AnneAdi"].ToString();
+                TxtHstTelefon.Text = dr["Telefon"].ToString();
+                TxtHstEPosta.Text = dr["EPosta"].ToString();
+              
+                //Datareader ile okunan verileri form kontrollerine aktardık.
+            }
+            else
+                MessageBox.Show("Kayıt Bulunamadı");
+            baglanti.Close();
+        }
+
+
     }
-}
+    }
