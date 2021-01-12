@@ -29,31 +29,29 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtTc = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtHstAd = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtHstSoyad = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TxtHstDgmYer = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CmbCinsiyet = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TxtHstBabaAd = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.TxtHstAnneAd = new System.Windows.Forms.TextBox();
+            this.TxtHstTelefon = new System.Windows.Forms.TextBox();
+            this.TxtHstEPosta = new System.Windows.Forms.TextBox();
+            this.btnKaydet = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.btnSil = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -66,12 +64,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "TcKimlik No:";
             // 
-            // textBox1
+            // TxtTc
             // 
-            this.textBox1.Location = new System.Drawing.Point(164, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 20);
-            this.textBox1.TabIndex = 1;
+            this.TxtTc.Location = new System.Drawing.Point(164, 39);
+            this.TxtTc.Name = "TxtTc";
+            this.TxtTc.Size = new System.Drawing.Size(153, 20);
+            this.TxtTc.TabIndex = 1;
             // 
             // button1
             // 
@@ -84,12 +82,12 @@
             this.button1.Text = "Sorgula";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // TxtHstAd
             // 
-            this.textBox2.Location = new System.Drawing.Point(164, 84);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(153, 20);
-            this.textBox2.TabIndex = 4;
+            this.TxtHstAd.Location = new System.Drawing.Point(164, 84);
+            this.TxtHstAd.Name = "TxtHstAd";
+            this.TxtHstAd.Size = new System.Drawing.Size(153, 20);
+            this.TxtHstAd.TabIndex = 4;
             // 
             // label2
             // 
@@ -101,12 +99,12 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Adı:";
             // 
-            // textBox3
+            // TxtHstSoyad
             // 
-            this.textBox3.Location = new System.Drawing.Point(165, 125);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(153, 20);
-            this.textBox3.TabIndex = 6;
+            this.TxtHstSoyad.Location = new System.Drawing.Point(165, 125);
+            this.TxtHstSoyad.Name = "TxtHstSoyad";
+            this.TxtHstSoyad.Size = new System.Drawing.Size(153, 20);
+            this.TxtHstSoyad.TabIndex = 6;
             // 
             // label3
             // 
@@ -118,12 +116,12 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Soyadı:";
             // 
-            // textBox4
+            // TxtHstDgmYer
             // 
-            this.textBox4.Location = new System.Drawing.Point(166, 159);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(153, 20);
-            this.textBox4.TabIndex = 8;
+            this.TxtHstDgmYer.Location = new System.Drawing.Point(166, 159);
+            this.TxtHstDgmYer.Name = "TxtHstDgmYer";
+            this.TxtHstDgmYer.Size = new System.Drawing.Size(153, 20);
+            this.TxtHstDgmYer.TabIndex = 8;
             // 
             // label4
             // 
@@ -135,16 +133,16 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Doğum Yeri:";
             // 
-            // comboBox1
+            // CmbCinsiyet
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.CmbCinsiyet.FormattingEnabled = true;
+            this.CmbCinsiyet.Items.AddRange(new object[] {
             "Kadın",
             "Erkek"});
-            this.comboBox1.Location = new System.Drawing.Point(166, 191);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(91, 21);
-            this.comboBox1.TabIndex = 10;
+            this.CmbCinsiyet.Location = new System.Drawing.Point(166, 191);
+            this.CmbCinsiyet.Name = "CmbCinsiyet";
+            this.CmbCinsiyet.Size = new System.Drawing.Size(91, 21);
+            this.CmbCinsiyet.TabIndex = 10;
             // 
             // label5
             // 
@@ -162,9 +160,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.Location = new System.Drawing.Point(15, 231);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 18);
+            this.label6.Size = new System.Drawing.Size(101, 18);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Doğum Yeri:";
+            this.label6.Text = "Doğum Tarihi:";
             // 
             // dateTimePicker1
             // 
@@ -173,12 +171,12 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(152, 20);
             this.dateTimePicker1.TabIndex = 12;
             // 
-            // textBox5
+            // TxtHstBabaAd
             // 
-            this.textBox5.Location = new System.Drawing.Point(166, 265);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(153, 20);
-            this.textBox5.TabIndex = 14;
+            this.TxtHstBabaAd.Location = new System.Drawing.Point(166, 265);
+            this.TxtHstBabaAd.Name = "TxtHstBabaAd";
+            this.TxtHstBabaAd.Size = new System.Drawing.Size(153, 20);
+            this.TxtHstBabaAd.TabIndex = 14;
             // 
             // label7
             // 
@@ -210,16 +208,6 @@
             this.label9.TabIndex = 16;
             this.label9.Text = "Cep Telefonu:";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(15, 364);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(112, 18);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Cep Telefonu 2:";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -230,99 +218,92 @@
             this.label11.TabIndex = 18;
             this.label11.Text = "E-Posta:";
             // 
-            // textBox6
+            // TxtHstAnneAd
             // 
-            this.textBox6.Location = new System.Drawing.Point(166, 302);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(153, 20);
-            this.textBox6.TabIndex = 19;
+            this.TxtHstAnneAd.Location = new System.Drawing.Point(166, 302);
+            this.TxtHstAnneAd.Name = "TxtHstAnneAd";
+            this.TxtHstAnneAd.Size = new System.Drawing.Size(153, 20);
+            this.TxtHstAnneAd.TabIndex = 19;
             // 
-            // textBox7
+            // TxtHstTelefon
             // 
-            this.textBox7.Location = new System.Drawing.Point(166, 333);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(153, 20);
-            this.textBox7.TabIndex = 20;
+            this.TxtHstTelefon.Location = new System.Drawing.Point(166, 333);
+            this.TxtHstTelefon.Name = "TxtHstTelefon";
+            this.TxtHstTelefon.Size = new System.Drawing.Size(153, 20);
+            this.TxtHstTelefon.TabIndex = 20;
             // 
-            // textBox8
+            // TxtHstEPosta
             // 
-            this.textBox8.Location = new System.Drawing.Point(166, 365);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(153, 20);
-            this.textBox8.TabIndex = 21;
+            this.TxtHstEPosta.Location = new System.Drawing.Point(166, 392);
+            this.TxtHstEPosta.Name = "TxtHstEPosta";
+            this.TxtHstEPosta.Size = new System.Drawing.Size(153, 20);
+            this.TxtHstEPosta.TabIndex = 22;
             // 
-            // textBox9
+            // btnKaydet
             // 
-            this.textBox9.Location = new System.Drawing.Point(166, 392);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(153, 20);
-            this.textBox9.TabIndex = 22;
+            this.btnKaydet.BackColor = System.Drawing.Color.Lime;
+            this.btnKaydet.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnKaydet.Location = new System.Drawing.Point(165, 430);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(66, 25);
+            this.btnKaydet.TabIndex = 23;
+            this.btnKaydet.Text = " Kaydet";
+            this.btnKaydet.UseVisualStyleBackColor = false;
+            this.btnKaydet.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button2
+            // btnGuncelle
             // 
-            this.button2.BackColor = System.Drawing.Color.Lime;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(165, 430);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(66, 25);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Kaydet";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnGuncelle.BackColor = System.Drawing.Color.Yellow;
+            this.btnGuncelle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnGuncelle.Location = new System.Drawing.Point(237, 430);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(66, 25);
+            this.btnGuncelle.TabIndex = 24;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
-            // button3
+            // btnSil
             // 
-            this.button3.BackColor = System.Drawing.Color.Yellow;
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(237, 430);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(66, 25);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "Güncelle";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSil.BackColor = System.Drawing.Color.Red;
+            this.btnSil.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSil.Location = new System.Drawing.Point(309, 430);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(66, 25);
+            this.btnSil.TabIndex = 25;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = false;
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(309, 430);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(66, 25);
-            this.button4.TabIndex = 25;
-            this.button4.Text = "Sil";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // Form3
+            // FrmHastaKayit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(401, 460);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.btnSil);
+            this.Controls.Add(this.btnGuncelle);
+            this.Controls.Add(this.btnKaydet);
+            this.Controls.Add(this.TxtHstEPosta);
+            this.Controls.Add(this.TxtHstTelefon);
+            this.Controls.Add(this.TxtHstAnneAd);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.TxtHstBabaAd);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.CmbCinsiyet);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.TxtHstDgmYer);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.TxtHstSoyad);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TxtHstAd);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtTc);
             this.Controls.Add(this.label1);
-            this.Name = "Form3";
+            this.Name = "FrmHastaKayit";
             this.Text = "Hasta Kayıt ";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
@@ -333,30 +314,28 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtTc;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtHstAd;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxtHstSoyad;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TxtHstDgmYer;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CmbCinsiyet;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox TxtHstBabaAd;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox TxtHstAnneAd;
+        private System.Windows.Forms.TextBox TxtHstTelefon;
+        private System.Windows.Forms.TextBox TxtHstEPosta;
+        private System.Windows.Forms.Button btnKaydet;
+        private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.Button btnSil;
     }
 }
