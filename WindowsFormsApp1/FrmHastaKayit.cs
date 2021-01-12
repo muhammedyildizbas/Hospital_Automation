@@ -56,7 +56,30 @@ namespace WindowsFormsApp1
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-           
+            try
+            {
+                baglanti.Open();
+                SqlCommand guncelle = new SqlCommand("update  Kullanicilar set Adi=@p2,Soyadi=@p3,DogumYeri=@p4,Cinsiyet=@p5,DogumTarihi=@p6,BabaAdi=@p7,AnneAdi=@p8,Telefon=@p9,EPosta=@p10 where TcNo=@p1", baglanti);
+                guncelle.Parameters.AddWithValue("@p1", TxtTc.Text);
+                guncelle.Parameters.AddWithValue("@p2", TxtHstAd.Text);
+                guncelle.Parameters.AddWithValue("@p3", TxtHstSoyad.Text);
+                guncelle.Parameters.AddWithValue("@p4", TxtHstDgmYer.Text);
+                guncelle.Parameters.AddWithValue("@p5", CmbCinsiyet.Text);
+                guncelle.Parameters.AddWithValue("@p6", dateTimePicker1.Text);
+                guncelle.Parameters.AddWithValue("@p7", TxtHstBabaAd.Text);
+                guncelle.Parameters.AddWithValue("@p8", TxtHstAnneAd.Text);
+                guncelle.Parameters.AddWithValue("@p9", TxtHstTelefon.Text);
+                guncelle.Parameters.AddWithValue("@p10", TxtHstEPosta.Text);
+                guncelle.ExecuteNonQuery();
+
+                baglanti.Close();
+                MessageBox.Show("Kayıt Yapıldı");
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Hasta Kaydı Yapılırken Hata Oluştu");
+            }
 
         }
 
