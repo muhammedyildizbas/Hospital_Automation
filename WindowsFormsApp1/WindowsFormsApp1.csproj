@@ -124,6 +124,11 @@
     <Compile Include="FrmKullaniciGiris.Designer.cs">
       <DependentUpon>FrmKullaniciGiris.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hospital_AutomationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hospital_AutomationDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmBilgiIslemGiris.resx">
@@ -175,6 +180,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Hospital_AutomationDataSet.xsc">
+      <DependentUpon>Hospital_AutomationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Hospital_AutomationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Hospital_AutomationDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital_AutomationDataSet.xss">
+      <DependentUpon>Hospital_AutomationDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
