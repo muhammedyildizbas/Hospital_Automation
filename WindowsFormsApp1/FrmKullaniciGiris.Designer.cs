@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form9
+    partial class FrmKullaniciGiris
     {
         /// <summary>
         /// Required designer variable.
@@ -73,24 +73,24 @@
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(268, 119);
+            this.button2.Location = new System.Drawing.Point(268, 131);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(66, 25);
             this.button2.TabIndex = 27;
             this.button2.Text = "Giriş";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // Form9
+            // FrmKullaniciGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 160);
+            this.ClientSize = new System.Drawing.Size(363, 177);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Name = "Form9";
+            this.Name = "FrmKullaniciGiris";
             this.Text = "Kullanıcı Girişi";
             this.ResumeLayout(false);
             this.PerformLayout();

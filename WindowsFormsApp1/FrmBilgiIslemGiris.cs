@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form9 : Form
+    public partial class FrmBilgiIslemGiris : Form
     {
-        public Form9()
+        public FrmBilgiIslemGiris()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
