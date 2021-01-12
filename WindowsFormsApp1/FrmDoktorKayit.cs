@@ -52,5 +52,41 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Doktor Kaydı Yapılırken Hata");
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            string kayit = "SELECT * from Doktorlar where TcNo=@TcNo";
+            //tcno parametresine bağlı olarak kullanıcı bilgilerini çeken sql kodu
+            SqlCommand komut2 = new SqlCommand(kayit, baglanti);
+            komut2.Parameters.AddWithValue("TcNo", TxtTc.Text);
+            //tcno parametremize textbox'dan girilen değeri aktarıyoruz
+            SqlDataAdapter da = new SqlDataAdapter(komut2);
+            SqlDataReader dr = komut2.ExecuteReader();
+            if (dr.Read()) //Sadece tek bir kayıt döndürüleceği için while kullanmadım.
+            {
+                TxtTc.Text = dr["TcNo"].ToString();
+                TxtDktrAd.Text = dr["Adi"].ToString();
+                TxtDktrSoyad.Text = dr["Soyadi"].ToString();
+                TxtDgmYeri.Text = dr["DogumYeri"].ToString();
+                CmbCinsiyet.Text = dr["Cinsiyet"].ToString();
+                dateTimePicker1.Text = dr["DogumTarihi"].ToString();
+                TxtDktrBabaAd.Text = dr["BabaAdi"].ToString();
+                TxtDktrAnneAd.Text = dr["AnneAdi"].ToString();
+                TxtDktrTel.Text = dr["Telefon"].ToString();
+                CmbPoliklinikAdi.Text = dr["PoliklinikAdi"].ToString();
+                TxtDktrEPosta.Text = dr["EPosta"].ToString();
+
+                //Datareader ile okunan verileri form kontrollerine aktardık.
+            }
+            else
+                MessageBox.Show("Kayıt Bulunamadı");
+            baglanti.Close();
+        }
     }
 }
