@@ -19,7 +19,8 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            FrmRandevuAlma frmRandevuAlma = new FrmRandevuAlma();
+            frmRandevuAlma.Show();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -29,7 +30,8 @@ namespace WindowsFormsApp1
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            FrmPoliklinikEkle frmPoliklinikEkle = new FrmPoliklinikEkle();
+            frmPoliklinikEkle.Show();
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -39,7 +41,8 @@ namespace WindowsFormsApp1
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            FrmBilgiIslemKayit frmBilgiIslemKayit = new FrmBilgiIslemKayit();
+            frmBilgiIslemKayit.Show();
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -52,6 +55,12 @@ namespace WindowsFormsApp1
             FrmHastaKayit frmHastaKayit = new FrmHastaKayit();
             frmHastaKayit.Show();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmDoktorKayit frmDoktorKayit = new FrmDoktorKayit();
+            frmDoktorKayit.Show();
         }
     }
 }
