@@ -54,9 +54,6 @@
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.hospital_AutomationDataSet = new WindowsFormsApp1.Hospital_AutomationDataSet();
-            this.kullanicilarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kullanicilarTableAdapter = new WindowsFormsApp1.Hospital_AutomationDataSetTableAdapters.KullanicilarTableAdapter();
             this.kullaniciIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tcNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,9 +65,12 @@
             this.anneAdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ePostaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kullanicilarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospital_AutomationDataSet = new WindowsFormsApp1.Hospital_AutomationDataSet();
+            this.kullanicilarTableAdapter = new WindowsFormsApp1.Hospital_AutomationDataSetTableAdapters.KullanicilarTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospital_AutomationDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kullanicilarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospital_AutomationDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -293,6 +293,7 @@
             this.btnSil.TabIndex = 25;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // dataGridView1
             // 
@@ -315,20 +316,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(765, 150);
             this.dataGridView1.TabIndex = 26;
-            // 
-            // hospital_AutomationDataSet
-            // 
-            this.hospital_AutomationDataSet.DataSetName = "Hospital_AutomationDataSet";
-            this.hospital_AutomationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // kullanicilarBindingSource
-            // 
-            this.kullanicilarBindingSource.DataMember = "Kullanicilar";
-            this.kullanicilarBindingSource.DataSource = this.hospital_AutomationDataSet;
-            // 
-            // kullanicilarTableAdapter
-            // 
-            this.kullanicilarTableAdapter.ClearBeforeFill = true;
             // 
             // kullaniciIdDataGridViewTextBoxColumn
             // 
@@ -398,6 +385,20 @@
             this.ePostaDataGridViewTextBoxColumn.HeaderText = "EPosta";
             this.ePostaDataGridViewTextBoxColumn.Name = "ePostaDataGridViewTextBoxColumn";
             // 
+            // kullanicilarBindingSource
+            // 
+            this.kullanicilarBindingSource.DataMember = "Kullanicilar";
+            this.kullanicilarBindingSource.DataSource = this.hospital_AutomationDataSet;
+            // 
+            // hospital_AutomationDataSet
+            // 
+            this.hospital_AutomationDataSet.DataSetName = "Hospital_AutomationDataSet";
+            this.hospital_AutomationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // kullanicilarTableAdapter
+            // 
+            this.kullanicilarTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmHastaKayit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -432,8 +433,8 @@
             this.Text = "Hasta Kayıt ";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospital_AutomationDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kullanicilarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospital_AutomationDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

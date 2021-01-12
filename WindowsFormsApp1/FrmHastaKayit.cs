@@ -113,6 +113,16 @@ namespace WindowsFormsApp1
             baglanti.Close();
         }
 
-
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand silme = new SqlCommand("delete from Kullanicilar where TcNo=@p1", baglanti);
+            silme.Parameters.AddWithValue("@p1", TxtTc.Text);
+            silme.ExecuteNonQuery();
+            baglanti.Close();
+            
+            MessageBox.Show("Kayit Silindi");
+           
+        }
     }
     }
