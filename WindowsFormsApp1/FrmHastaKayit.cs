@@ -20,6 +20,8 @@ namespace WindowsFormsApp1
         SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-44T2TND;Initial Catalog=Hospital_Automation;Integrated Security=True");
         private void Form3_Load(object sender, EventArgs e)
         {
+            // TODO: Bu kod satırı 'hospital_AutomationDataSet.Kullanicilar' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.kullanicilarTableAdapter.Fill(this.hospital_AutomationDataSet.Kullanicilar);
 
         }
 
@@ -54,6 +56,7 @@ namespace WindowsFormsApp1
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
+           
 
         }
 
