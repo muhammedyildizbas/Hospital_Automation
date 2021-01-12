@@ -44,7 +44,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CmbPoliklinik = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -236,18 +236,13 @@
             this.label8.Text = "Poliklinik Adı:";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // comboBox1
+            // CmbPoliklinik
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Diş",
-            "Cildiye",
-            "Noroloji",
-            "KBB"});
-            this.comboBox1.Location = new System.Drawing.Point(116, 157);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(145, 21);
-            this.comboBox1.TabIndex = 22;
+            this.CmbPoliklinik.FormattingEnabled = true;
+            this.CmbPoliklinik.Location = new System.Drawing.Point(116, 157);
+            this.CmbPoliklinik.Name = "CmbPoliklinik";
+            this.CmbPoliklinik.Size = new System.Drawing.Size(145, 21);
+            this.CmbPoliklinik.TabIndex = 22;
             // 
             // label7
             // 
@@ -365,7 +360,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.CmbPoliklinik);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label6);
@@ -413,7 +408,7 @@
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CmbPoliklinik;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label9;

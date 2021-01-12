@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class FrmBilgiIslemKayit : Form
     {
-        public Form1()
+        public FrmBilgiIslemKayit()
         {
             InitializeComponent();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmBilgiIslemKayit_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

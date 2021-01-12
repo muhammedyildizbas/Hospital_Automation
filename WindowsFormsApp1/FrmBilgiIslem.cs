@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
@@ -17,6 +18,9 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-44T2TND;Initial Catalog=Hospital_Automation;Integrated Security=True");
+        
+
         private void button3_Click(object sender, EventArgs e)
         {
             FrmRandevuAlma frmRandevuAlma = new FrmRandevuAlma();
@@ -25,7 +29,14 @@ namespace WindowsFormsApp1
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("Select PoliklinikAdi From Poliklinikler", baglanti);
+            SqlDataReader oku = komut.ExecuteReader();
+            while (oku.Read())
+            {
+                CmbPoliklinik.Items.Add(oku[0].ToString()); 
+            }
+            baglanti.Close();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -64,3 +75,4 @@ namespace WindowsFormsApp1
         }
     }
 }
+//Data Source=DESKTOP-44T2TND;Initial Catalog=Hospital_Automation;Integrated Security=True

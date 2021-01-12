@@ -57,3 +57,4 @@ D:\Githup\Hospital_Automation\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmDok
 D:\Githup\Hospital_Automation\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmKullaniciGiris.resources
 D:\Githup\Hospital_Automation\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmBilgiIslemGiris.resources
 D:\Githup\Hospital_Automation\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmDoktorGiris.resources
+D:\Githup\Hospital_Automation\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmBilgiIslemKayit.resources

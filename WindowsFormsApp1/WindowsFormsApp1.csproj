@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmBilgiIslemKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBilgiIslemKayit.Designer.cs">
+      <DependentUpon>FrmBilgiIslemKayit.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDoktorGiris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmBilgiIslemGiris.resx">
       <DependentUpon>FrmBilgiIslemGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBilgiIslemKayit.resx">
+      <DependentUpon>FrmBilgiIslemKayit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDoktorGiris.resx">
       <DependentUpon>FrmDoktorGiris.cs</DependentUpon>
