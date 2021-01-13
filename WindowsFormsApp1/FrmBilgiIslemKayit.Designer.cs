@@ -58,6 +58,7 @@
             this.button4.TabIndex = 79;
             this.button4.Text = "Sil";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
