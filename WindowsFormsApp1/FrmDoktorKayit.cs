@@ -55,7 +55,31 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            try
+            {
+                baglanti.Open();
+                SqlCommand guncelle = new SqlCommand("update Doktorlar set Adi=@p2,Soyadi=@p3,DogumYeri=@p4,Cinsiyet=@p5,DogumTarihi=@p6,BabaAdi=@p7,AnneAdi=@p8,Telefon=@p9,PoliklinikAdi=@p10,EPosta=@p11 where TcNo=@p1", baglanti);
+                guncelle.Parameters.AddWithValue("@p1", TxtTc.Text);
+                guncelle.Parameters.AddWithValue("@p2", TxtDktrAd.Text);
+                guncelle.Parameters.AddWithValue("@p3", TxtDktrSoyad.Text);
+                guncelle.Parameters.AddWithValue("@p4", TxtDgmYeri.Text);
+                guncelle.Parameters.AddWithValue("@p5", CmbCinsiyet.Text);
+                guncelle.Parameters.AddWithValue("@p6", dateTimePicker1.Text);
+                guncelle.Parameters.AddWithValue("@p7", TxtDktrBabaAd.Text);
+                guncelle.Parameters.AddWithValue("@p8", TxtDktrAnneAd.Text);
+                guncelle.Parameters.AddWithValue("@p9", TxtDktrTel.Text);
+                guncelle.Parameters.AddWithValue("@p10", CmbPoliklinikAdi.Text);
+                guncelle.Parameters.AddWithValue("@p11", TxtDktrEPosta.Text);
+                guncelle.ExecuteNonQuery();
 
+                baglanti.Close();
+                MessageBox.Show("Güncelleme Yapıldı");
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Güncelleme Yapılırken Hata Oluştu");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -87,6 +111,18 @@ namespace WindowsFormsApp1
             else
                 MessageBox.Show("Kayıt Bulunamadı");
             baglanti.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand silme = new SqlCommand("delete from Doktorlar where TcNo=@p1", baglanti);
+            silme.Parameters.AddWithValue("@p1", TxtTc.Text);
+            silme.ExecuteNonQuery();
+            baglanti.Close();
+
+            MessageBox.Show("Kayit Silindi");
+
         }
     }
 }

@@ -66,6 +66,7 @@
             this.button4.TabIndex = 51;
             this.button4.Text = "Sil";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -172,9 +173,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.Location = new System.Drawing.Point(24, 257);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 18);
+            this.label6.Size = new System.Drawing.Size(101, 18);
             this.label6.TabIndex = 37;
-            this.label6.Text = "Doğum Yeri:";
+            this.label6.Text = "Doğum Tarihi:";
             // 
             // CmbCinsiyet
             // 
