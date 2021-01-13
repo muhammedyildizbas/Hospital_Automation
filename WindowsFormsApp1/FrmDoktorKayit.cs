@@ -112,5 +112,17 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Kayıt Bulunamadı");
             baglanti.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand silme = new SqlCommand("delete from Doktorlar where TcNo=@p1", baglanti);
+            silme.Parameters.AddWithValue("@p1", TxtTc.Text);
+            silme.ExecuteNonQuery();
+            baglanti.Close();
+
+            MessageBox.Show("Kayit Silindi");
+
+        }
     }
 }
