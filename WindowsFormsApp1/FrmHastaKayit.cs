@@ -78,7 +78,7 @@ namespace WindowsFormsApp1
             catch (Exception)
             {
 
-                MessageBox.Show("Hasta Kaydı Yapılırken Hata Oluştu");
+                MessageBox.Show("Güncelleme Yapılırken Hata Oluştu");
             }
 
         }
