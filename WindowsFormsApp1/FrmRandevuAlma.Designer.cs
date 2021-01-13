@@ -102,11 +102,6 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Melik Tapar",
-            "Zeynep Yıldızbaş",
-            "Nurettin Selvi",
-            "Gamze Adalı"});
             this.comboBox2.Location = new System.Drawing.Point(256, 79);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(155, 21);
@@ -174,6 +169,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(153, 20);
             this.textBox2.TabIndex = 63;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button2
             // 

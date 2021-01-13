@@ -5,9 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data.OleDb;
 
 namespace WindowsFormsApp1
 {
@@ -42,14 +43,15 @@ namespace WindowsFormsApp1
             {
 
                 if (baglanti.State == ConnectionState.Closed) baglanti.Open();
-                SqlCommand veri = new SqlCommand("SELECT RandevuSaati FROM Randevular where DoktorId " + dr_id + "and RandevuTarih='" + dateTimePicker1  .Text + "'", baglanti);
+                SqlCommand veri = new SqlCommand("SELECT RandevuSaati FROM Randevular where DoktorId " + dr_id + "and RandevuTarihi='" + dateTimePicker1 .Text + "'", baglanti);
                 SqlDataReader oku = null;
                 oku = veri.ExecuteReader();
-                liste.Items.Clear();
+                liste .Items.Clear();
                 while (oku.Read())
                 {
-                    liste.Items.Add(oku.GetString(0).ToString());
+                    liste .Items.Add(oku.GetString(0).ToString());
                 }
+                veri.ExecuteNonQuery();
                 oku.Close();
                 baglanti.Close();
 
@@ -60,6 +62,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Bossati Oku da sorun çıktı");
             }
         }
+        public string deger;
         //................
         public void listele()
         {
@@ -353,137 +356,7 @@ namespace WindowsFormsApp1
             pol_oku();
         }
 
-      
-        
 
-        
-
-       
-
-        public string deger;
-
-      
-      
-
-        private void button39_Click(object sender, EventArgs e)
-        {
-            if ((textBox1.Text == "") || (textBox2.Text == ""))
-            {
-                MessageBox.Show("Hiçbir Alanın Boş Olmadığından Emin Olduktan Sonra Tekrar Deneyiniz...", " ", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-
-            }
-            else
-            {
-                DateTime geciciTarih = Convert.ToDateTime(dateTimePicker1.Text);
-                string gun = string.Empty;
-
-                gun = geciciTarih.ToString("dddd");
-                if (gun != "Cumartesi" && gun != "Pazar")
-                {
-                    listele();
-                    string hasta_tc;
-                    if (baglanti.State == ConnectionState.Closed) baglanti.Open();
-                    SqlCommand veri = new SqlCommand("SELECT  TcNo FROM Kullanicilar WHERE TcNo = '" + textBox1.Text + "'", baglanti);
-                    hasta_tc = veri.ExecuteScalar().ToString();
-                    baglanti.Close();
-
-                    if (hasta_tc != textBox1.Text)
-                    {
-                        MessageBox.Show("Böyle bir Hasta Kaydı Yoktur.Hasta Kaydı Yapıp Tekrar Deneyiniz...");
-                    }
-                    else
-                    {
-                        int pol;
-                        if (baglanti.State == ConnectionState.Closed) baglanti.Open();
-                        SqlCommand veri2 = new SqlCommand("SELECT Pol_id FROM Randevular WHERE TcNo = '" + textBox1.Text + "'", baglanti);
-
-                        SqlDataReader oku2 = null;
-                        oku2 = veri2.ExecuteReader();
-
-                        while (oku2.Read())
-                        {
-                            listBox1.Items.Add(oku2.GetInt32(0));
-                        }
-                        oku2.Close();
-                        baglanti.Close();
-
-
-
-                        bossaat_oku();
-                        int sayac = listBox1.Items.Count;
-
-                        for (int i = 0; i < sayac; i++)
-                        {
-
-                            if (listBox1.Items[i].ToString() == pol_id.ToString())
-                            {
-                                deger = listBox1.Items[i].ToString();
-
-                            }
-
-                        }
-                        if (deger == pol_id.ToString())
-                        {
-
-                            MessageBox.Show("Bu Polikliniğe Zaten Hasta Kaydı Yapılmıştır...");
-                            this.Close();
-
-                            listBox1.Items.Clear();
-
-
-                        }
-                        else
-                        {
-                            if (baglanti.State == ConnectionState.Closed) baglanti.Open();
-                            SqlCommand kaydet = new SqlCommand("insert into Randevular (DoktorId,RandevuTarihi,TcNo,RandevuSaati,Pol_id) values(" + dr_id + ",'" + dateTimePicker1.Text + "','" + textBox1.Text + "','" + textBox2.Text + "','" + pol_id + "')", baglanti);
-                            kaydet.ExecuteNonQuery();
-                            MessageBox.Show("Randevu Başarılı Bir Şekilde Eklendi...", "Hastane Randevu Sistemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                            baglanti.Close();
-                            bossaat_oku();
-                            listele();
-                        }
-
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Cumartesi veya Pazar Günü Randevu Alamazsınız...");
-                }
-                bossaat_oku();
-            }
-        }
-
-        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
-        {
-            try
-            {
-
-
-                DateTime geciciTarih = Convert.ToDateTime(dateTimePicker1.Text);
-
-                string gun = string.Empty;
-
-                gun = geciciTarih.ToString("dddd");
-                if (gun != "Cumartesi" && gun != "Pazar")
-                {
-                    listele();
-
-                }
-                else
-                {
-                    MessageBox.Show("Cumartesi veya Pazar Günü Randevu Alamazsınız...");
-
-
-                }
-
-            }
-            catch
-            {
-
-                MessageBox.Show("Date Time Picker Value Changed hata");
-            }
-
-        }
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
@@ -510,6 +383,7 @@ namespace WindowsFormsApp1
             baglanti.Close();
         }
 
+
         private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (baglanti.State == ConnectionState.Closed) baglanti.Open();
@@ -522,6 +396,7 @@ namespace WindowsFormsApp1
             baglanti.Close();
             listele();
         }
+
 
         private void button38_Click(object sender, EventArgs e)
         {
@@ -706,6 +581,132 @@ namespace WindowsFormsApp1
         private void button31_Click_1(object sender, EventArgs e)
         {
             textBox2.Text = button31.Text;
+        }
+
+
+        private void button39_Click(object sender, EventArgs e)
+        {
+            if ((textBox1.Text == "") || (textBox2.Text == ""))
+            {
+                MessageBox.Show("Hiçbir Alanın Boş Olmadığından Emin Olduktan Sonra Tekrar Deneyiniz...", " ", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+            }
+            else
+            {
+                DateTime geciciTarih = Convert.ToDateTime(dateTimePicker1.Text);
+                string gun = string.Empty;
+
+                gun = geciciTarih.ToString("dddd");
+                if (gun != "Cumartesi" && gun != "Pazar")
+                {
+                    listele();
+                    string hasta_tc;
+                    if (baglanti.State == ConnectionState.Closed) baglanti.Open();
+                    SqlCommand veri = new SqlCommand("SELECT  TcNo FROM Kullanicilar WHERE TcNo = '" + textBox1.Text + "'", baglanti);
+                    hasta_tc = veri.ExecuteScalar().ToString();
+                    baglanti.Close();
+
+                    if (hasta_tc != textBox1.Text)
+                    {
+                        MessageBox.Show("Böyle bir Hasta Kaydı Yoktur.Hasta Kaydı Yapıp Tekrar Deneyiniz...");
+                    }
+                    else
+                    {
+                        int pol;
+                        if (baglanti.State == ConnectionState.Closed) baglanti.Open();
+                        SqlCommand veri2 = new SqlCommand("SELECT Pol_id FROM Randevular WHERE TcNo = '" + textBox1.Text + "'", baglanti);
+
+                        SqlDataReader oku2 = null;
+                        oku2 = veri2.ExecuteReader();
+
+                        while (oku2.Read())
+                        {
+                            listBox1.Items.Add(oku2.GetInt32(0));
+                        }
+                        oku2.Close();
+                        baglanti.Close();
+
+
+
+                        bossaat_oku();
+                        int sayac = listBox1.Items.Count;
+
+                        for (int i = 0; i < sayac; i++)
+                        {
+
+                            if (listBox1.Items[i].ToString() == pol_id.ToString())
+                            {
+                                deger = listBox1.Items[i].ToString();
+
+                            }
+
+                        }
+                        if (deger == pol_id.ToString())
+                        {
+
+                            MessageBox.Show("Bu Polikliniğe Zaten Hasta Kaydı Yapılmıştır...");
+                            this.Close();
+
+                            listBox1.Items.Clear();
+
+
+                        }
+                        else
+                        {
+                            if (baglanti.State == ConnectionState.Closed) baglanti.Open();
+                            SqlCommand kaydet = new SqlCommand("insert into Randevular (DoktorId,RandevuTarihi,TcNo,RandevuSaati,Pol_id) values(" + dr_id + ",'" + dateTimePicker1.Text + "','" + textBox1.Text + "','" + textBox2.Text + "','" + pol_id + "')", baglanti);
+                            kaydet.ExecuteNonQuery();
+                            MessageBox.Show("Randevu Başarılı Bir Şekilde Eklendi...", "Hastane Randevu Sistemi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            baglanti.Close();
+                            bossaat_oku();
+                            listele();
+                        }
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Cumartesi veya Pazar Günü Randevu Alamazsınız...");
+                }
+                bossaat_oku();
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                DateTime geciciTarih = Convert.ToDateTime(dateTimePicker1.Text);
+
+                string gun = string.Empty;
+
+                gun = geciciTarih.ToString("dddd");
+                if (gun != "Cumartesi" && gun != "Pazar")
+                {
+                    listele();
+
+                }
+                else
+                {
+                    MessageBox.Show("Cumartesi veya Pazar Günü Randevu Alamazsınız...");
+
+
+                }
+
+            }
+            catch
+            {
+
+                MessageBox.Show("Date Time Picker Value Changed hata");
+            }
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
