@@ -33,14 +33,7 @@ namespace WindowsFormsApp1
             this.kullanicilarTableAdapter.Fill(this.hospital_AutomationDataSet6.Kullanicilar);
             // TODO: Bu kod satırı 'hospital_AutomationDataSet5.Randevular' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
             this.randevularTableAdapter.Fill(this.hospital_AutomationDataSet5.Randevular);
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand("Select PoliklinikAdi From Poliklinikler", baglanti);
-            SqlDataReader oku = komut.ExecuteReader();
-            while (oku.Read())
-            {
-                CmbPoliklinik.Items.Add(oku[0].ToString()); 
-            }
-            baglanti.Close();
+          
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -76,6 +69,32 @@ namespace WindowsFormsApp1
         {
             FrmDoktorKayit frmDoktorKayit = new FrmDoktorKayit();
             frmDoktorKayit.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("Select *from Kullanicilar where Adi like '%" + TxtHstAd.Text + "%'", baglanti);
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            TxtHstAd.Clear();
+            baglanti.Close();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut2 = new SqlCommand("Select *from Kullanicilar where TcNo like '%" + TxtTcNo.Text + "%'", baglanti);
+            SqlDataAdapter da = new SqlDataAdapter(komut2);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+
+            TxtTcNo.Clear();
+            
+            baglanti.Close();
         }
     }
 }

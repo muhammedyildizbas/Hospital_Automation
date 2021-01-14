@@ -81,7 +81,10 @@ namespace WindowsFormsApp1
                 TxtBlgIslemEPosta.Text = dr["EPosta"].ToString();
                 TxtBlgIslemSifre.Text = dr["Sifre"].ToString();
                 CmbCinsiyet.Text = dr["Cinsiyet"].ToString();
-                
+
+              
+
+
                 //Datareader ile okunan verileri form kontrollerine aktardık.
             }
             else
