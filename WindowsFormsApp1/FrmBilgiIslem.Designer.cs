@@ -38,12 +38,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.TxtTcNo = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.hospital_AutomationDataSet5 = new WindowsFormsApp1.Hospital_AutomationDataSet5();
             this.randevularBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.randevularTableAdapter = new WindowsFormsApp1.Hospital_AutomationDataSet5TableAdapters.RandevularTableAdapter();
@@ -66,6 +60,12 @@
             this.TxtHstAd = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.hospital_AutomationDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.randevularBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospital_AutomationDataSet6)).BeginInit();
@@ -123,6 +123,7 @@
             this.button4.TabIndex = 13;
             this.button4.Text = "Randevu Sil";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -177,79 +178,6 @@
             this.TxtTcNo.Name = "TxtTcNo";
             this.TxtTcNo.Size = new System.Drawing.Size(144, 20);
             this.TxtTcNo.TabIndex = 24;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Image = global::WindowsFormsApp1.Properties.Resources.personel_ekle2;
-            this.label6.Location = new System.Drawing.Point(635, 15);
-            this.label6.MaximumSize = new System.Drawing.Size(120, 90);
-            this.label6.MinimumSize = new System.Drawing.Size(80, 100);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 100);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "\r\n";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Image = global::WindowsFormsApp1.Properties.Resources.polikinlik_4;
-            this.label5.Location = new System.Drawing.Point(404, 19);
-            this.label5.MaximumSize = new System.Drawing.Size(120, 90);
-            this.label5.MinimumSize = new System.Drawing.Size(80, 100);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 100);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "\r\n";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Image = global::WindowsFormsApp1.Properties.Resources.randevu_iptal2;
-            this.label4.Location = new System.Drawing.Point(282, 20);
-            this.label4.MaximumSize = new System.Drawing.Size(120, 90);
-            this.label4.MinimumSize = new System.Drawing.Size(80, 100);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 100);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "\r\n";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Image = global::WindowsFormsApp1.Properties.Resources.randevu3;
-            this.label3.Location = new System.Drawing.Point(163, 20);
-            this.label3.MaximumSize = new System.Drawing.Size(120, 90);
-            this.label3.MinimumSize = new System.Drawing.Size(80, 100);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 100);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "\r\n";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Image = global::WindowsFormsApp1.Properties.Resources.hasta_ekle3;
-            this.label2.Location = new System.Drawing.Point(38, 17);
-            this.label2.MaximumSize = new System.Drawing.Size(120, 90);
-            this.label2.MinimumSize = new System.Drawing.Size(80, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 100);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "\r\n";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Image = global::WindowsFormsApp1.Properties.Resources.doktor_ekle2;
-            this.label1.Location = new System.Drawing.Point(523, 17);
-            this.label1.MaximumSize = new System.Drawing.Size(120, 90);
-            this.label1.MinimumSize = new System.Drawing.Size(80, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 100);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "\r\n";
             // 
             // hospital_AutomationDataSet5
             // 
@@ -408,6 +336,79 @@
             this.button8.Text = "Sorgula";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Image = global::WindowsFormsApp1.Properties.Resources.personel_ekle2;
+            this.label6.Location = new System.Drawing.Point(635, 15);
+            this.label6.MaximumSize = new System.Drawing.Size(120, 90);
+            this.label6.MinimumSize = new System.Drawing.Size(80, 100);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 100);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "\r\n";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Image = global::WindowsFormsApp1.Properties.Resources.polikinlik_4;
+            this.label5.Location = new System.Drawing.Point(404, 19);
+            this.label5.MaximumSize = new System.Drawing.Size(120, 90);
+            this.label5.MinimumSize = new System.Drawing.Size(80, 100);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 100);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "\r\n";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Image = global::WindowsFormsApp1.Properties.Resources.randevu_iptal2;
+            this.label4.Location = new System.Drawing.Point(282, 20);
+            this.label4.MaximumSize = new System.Drawing.Size(120, 90);
+            this.label4.MinimumSize = new System.Drawing.Size(80, 100);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 100);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "\r\n";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Image = global::WindowsFormsApp1.Properties.Resources.randevu3;
+            this.label3.Location = new System.Drawing.Point(163, 20);
+            this.label3.MaximumSize = new System.Drawing.Size(120, 90);
+            this.label3.MinimumSize = new System.Drawing.Size(80, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 100);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "\r\n";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Image = global::WindowsFormsApp1.Properties.Resources.hasta_ekle3;
+            this.label2.Location = new System.Drawing.Point(38, 17);
+            this.label2.MaximumSize = new System.Drawing.Size(120, 90);
+            this.label2.MinimumSize = new System.Drawing.Size(80, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 100);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "\r\n";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Image = global::WindowsFormsApp1.Properties.Resources.doktor_ekle2;
+            this.label1.Location = new System.Drawing.Point(523, 17);
+            this.label1.MaximumSize = new System.Drawing.Size(120, 90);
+            this.label1.MinimumSize = new System.Drawing.Size(80, 100);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 100);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "\r\n";
             // 
             // FrmBilgiIslem
             // 

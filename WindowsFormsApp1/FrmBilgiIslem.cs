@@ -96,6 +96,12 @@ namespace WindowsFormsApp1
             
             baglanti.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FrmRandevuSilme frmRandevuSilme = new FrmRandevuSilme();
+            frmRandevuSilme.Show();
+        }
     }
 }
 //Data Source=DESKTOP-44T2TND;Initial Catalog=Hospital_Automation;Integrated Security=True
