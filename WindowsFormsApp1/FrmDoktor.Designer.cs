@@ -109,11 +109,11 @@
             this.button1.BackColor = System.Drawing.Color.Gold;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(638, 52);
+            this.button1.Location = new System.Drawing.Point(613, 52);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 26);
+            this.button1.Size = new System.Drawing.Size(100, 26);
             this.button1.TabIndex = 104;
-            this.button1.Text = "İlaç Ver";
+            this.button1.Text = "İlaçlar Bilgisi";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -122,7 +122,7 @@
             this.button2.BackColor = System.Drawing.Color.DarkCyan;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(520, 52);
+            this.button2.Location = new System.Drawing.Point(485, 52);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(112, 26);
             this.button2.TabIndex = 105;

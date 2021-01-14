@@ -29,6 +29,10 @@ namespace WindowsFormsApp1
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: Bu kod satırı 'hospital_AutomationDataSet6.Kullanicilar' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.kullanicilarTableAdapter.Fill(this.hospital_AutomationDataSet6.Kullanicilar);
+            // TODO: Bu kod satırı 'hospital_AutomationDataSet5.Randevular' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.randevularTableAdapter.Fill(this.hospital_AutomationDataSet5.Randevular);
             baglanti.Open();
             SqlCommand komut = new SqlCommand("Select PoliklinikAdi From Poliklinikler", baglanti);
             SqlDataReader oku = komut.ExecuteReader();

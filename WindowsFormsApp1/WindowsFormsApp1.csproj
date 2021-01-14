@@ -145,6 +145,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Hospital_AutomationDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Hospital_AutomationDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hospital_AutomationDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital_AutomationDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hospital_AutomationDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital_AutomationDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hospital_AutomationDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital_AutomationDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hospital_AutomationDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmMuayeneler.resx">
@@ -231,6 +251,50 @@
     </None>
     <None Include="Hospital_AutomationDataSet2.xss">
       <DependentUpon>Hospital_AutomationDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Hospital_AutomationDataSet3.xsc">
+      <DependentUpon>Hospital_AutomationDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Hospital_AutomationDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Hospital_AutomationDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital_AutomationDataSet3.xss">
+      <DependentUpon>Hospital_AutomationDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Hospital_AutomationDataSet4.xsc">
+      <DependentUpon>Hospital_AutomationDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Hospital_AutomationDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Hospital_AutomationDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital_AutomationDataSet4.xss">
+      <DependentUpon>Hospital_AutomationDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Hospital_AutomationDataSet5.xsc">
+      <DependentUpon>Hospital_AutomationDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Hospital_AutomationDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Hospital_AutomationDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital_AutomationDataSet5.xss">
+      <DependentUpon>Hospital_AutomationDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Hospital_AutomationDataSet6.xsc">
+      <DependentUpon>Hospital_AutomationDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Hospital_AutomationDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Hospital_AutomationDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital_AutomationDataSet6.xss">
+      <DependentUpon>Hospital_AutomationDataSet6.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
