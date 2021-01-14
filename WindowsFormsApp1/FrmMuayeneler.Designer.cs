@@ -36,13 +36,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.TxtHstAd = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.CmbCinsiyet = new System.Windows.Forms.ComboBox();
+            this.CmbDoktorId = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.hospital_AutomationDataSet1 = new WindowsFormsApp1.Hospital_AutomationDataSet1();
             this.randevularBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.randevularTableAdapter = new WindowsFormsApp1.Hospital_AutomationDataSet1TableAdapters.RandevularTableAdapter();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.TxtIlacAdi = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TxtIlacKod = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.hospital_AutomationDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.randevularBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +65,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Bilgileri Getir";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // TxtTc
             // 
@@ -109,16 +118,18 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Adı:";
             // 
-            // CmbCinsiyet
+            // CmbDoktorId
             // 
-            this.CmbCinsiyet.FormattingEnabled = true;
-            this.CmbCinsiyet.Items.AddRange(new object[] {
-            "Kadın",
-            "Erkek"});
-            this.CmbCinsiyet.Location = new System.Drawing.Point(150, 46);
-            this.CmbCinsiyet.Name = "CmbCinsiyet";
-            this.CmbCinsiyet.Size = new System.Drawing.Size(91, 21);
-            this.CmbCinsiyet.TabIndex = 12;
+            this.CmbDoktorId.FormattingEnabled = true;
+            this.CmbDoktorId.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.CmbDoktorId.Location = new System.Drawing.Point(156, 46);
+            this.CmbDoktorId.Name = "CmbDoktorId";
+            this.CmbDoktorId.Size = new System.Drawing.Size(91, 21);
+            this.CmbDoktorId.TabIndex = 12;
             // 
             // label5
             // 
@@ -134,23 +145,25 @@
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(150, 236);
+            this.button2.Location = new System.Drawing.Point(284, 413);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(91, 25);
             this.button2.TabIndex = 13;
             this.button2.Text = "Kaydet";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Red;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(261, 236);
+            this.button3.Location = new System.Drawing.Point(395, 413);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(42, 25);
             this.button3.TabIndex = 14;
             this.button3.Text = "İptal";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // hospital_AutomationDataSet1
             // 
@@ -166,14 +179,98 @@
             // 
             this.randevularTableAdapter.ClearBeforeFill = true;
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(150, 307);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(290, 95);
+            this.richTextBox1.TabIndex = 15;
+            this.richTextBox1.Text = "";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(39, 304);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 18);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Açıklama :";
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button5.Location = new System.Drawing.Point(322, 273);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(66, 25);
+            this.button5.TabIndex = 72;
+            this.button5.Text = "Sorgula";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button6.Location = new System.Drawing.Point(322, 222);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(66, 25);
+            this.button6.TabIndex = 71;
+            this.button6.Text = "Sorgula";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // TxtIlacAdi
+            // 
+            this.TxtIlacAdi.Location = new System.Drawing.Point(150, 275);
+            this.TxtIlacAdi.Name = "TxtIlacAdi";
+            this.TxtIlacAdi.Size = new System.Drawing.Size(153, 20);
+            this.TxtIlacAdi.TabIndex = 70;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(39, 274);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 18);
+            this.label4.TabIndex = 69;
+            this.label4.Text = "İlaç Adı:";
+            // 
+            // TxtIlacKod
+            // 
+            this.TxtIlacKod.Location = new System.Drawing.Point(150, 225);
+            this.TxtIlacKod.Name = "TxtIlacKod";
+            this.TxtIlacKod.Size = new System.Drawing.Size(153, 20);
+            this.TxtIlacKod.TabIndex = 68;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(39, 224);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 18);
+            this.label7.TabIndex = 67;
+            this.label7.Text = "İlaç kodu:";
+            // 
             // FrmMuayeneler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.TxtIlacAdi);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.TxtIlacKod);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.CmbCinsiyet);
+            this.Controls.Add(this.CmbDoktorId);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TxtHstSoyad);
             this.Controls.Add(this.label3);
@@ -201,12 +298,20 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TxtHstAd;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox CmbCinsiyet;
+        private System.Windows.Forms.ComboBox CmbDoktorId;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private Hospital_AutomationDataSet1 hospital_AutomationDataSet1;
         private System.Windows.Forms.BindingSource randevularBindingSource;
         private Hospital_AutomationDataSet1TableAdapters.RandevularTableAdapter randevularTableAdapter;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox TxtIlacAdi;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox TxtIlacKod;
+        private System.Windows.Forms.Label label7;
     }
 }

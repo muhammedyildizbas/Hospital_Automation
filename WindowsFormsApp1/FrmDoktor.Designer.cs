@@ -69,9 +69,8 @@
             this.lblPolAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblPolAd.Location = new System.Drawing.Point(112, 22);
             this.lblPolAd.Name = "lblPolAd";
-            this.lblPolAd.Size = new System.Drawing.Size(128, 18);
+            this.lblPolAd.Size = new System.Drawing.Size(0, 18);
             this.lblPolAd.TabIndex = 10;
-            this.lblPolAd.Text = "Ağız ve Diş Sağlığı";
             // 
             // label3
             // 
@@ -89,9 +88,8 @@
             this.lblDoktorAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblDoktorAd.Location = new System.Drawing.Point(333, 23);
             this.lblDoktorAd.Name = "lblDoktorAd";
-            this.lblDoktorAd.Size = new System.Drawing.Size(92, 18);
+            this.lblDoktorAd.Size = new System.Drawing.Size(0, 18);
             this.lblDoktorAd.TabIndex = 12;
-            this.lblDoktorAd.Text = "Gamze Adalı";
             // 
             // button38
             // 
