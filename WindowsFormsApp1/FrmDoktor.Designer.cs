@@ -28,103 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblPolAd = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblDoktorAd = new System.Windows.Forms.Label();
             this.button38 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
+            this.button2 = new System.Windows.Forms.Button();
+            this.CmbDoktorNo = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.hospital_AutomationDataSet2 = new WindowsFormsApp1.Hospital_AutomationDataSet2();
+            this.randevularBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.randevularTableAdapter = new WindowsFormsApp1.Hospital_AutomationDataSet2TableAdapters.RandevularTableAdapter();
+            this.randevuIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doktorIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.randevuTarihiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tcNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.randevuSaatiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.polidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospital_AutomationDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.randevularBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Controls.Add(this.tabPage7);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(12, 89);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(723, 251);
-            this.tabControl1.TabIndex = 1;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(715, 225);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Tc Kimlik No";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(715, 225);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "Hasta Adı";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(715, 225);
-            this.tabPage3.TabIndex = 3;
-            this.tabPage3.Text = "Hasta Soyadı";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(715, 225);
-            this.tabPage6.TabIndex = 6;
-            this.tabPage6.Text = "Tarih";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(715, 225);
-            this.tabPage7.TabIndex = 7;
-            this.tabPage7.Text = "Saat";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(715, 225);
-            this.tabPage4.TabIndex = 8;
-            this.tabPage4.Text = "Verilen İlaç";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(715, 225);
-            this.tabPage5.TabIndex = 9;
-            this.tabPage5.Text = "Muayene Durumu";
-            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -136,15 +63,15 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Poliklinik Adı:";
             // 
-            // label2
+            // lblPolAd
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(112, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 18);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Ağız ve Diş Sağlığı";
+            this.lblPolAd.AutoSize = true;
+            this.lblPolAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPolAd.Location = new System.Drawing.Point(112, 22);
+            this.lblPolAd.Name = "lblPolAd";
+            this.lblPolAd.Size = new System.Drawing.Size(128, 18);
+            this.lblPolAd.TabIndex = 10;
+            this.lblPolAd.Text = "Ağız ve Diş Sağlığı";
             // 
             // label3
             // 
@@ -156,75 +83,189 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Doktor:";
             // 
-            // label4
+            // lblDoktorAd
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(333, 23);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 18);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Gamze Adalı";
+            this.lblDoktorAd.AutoSize = true;
+            this.lblDoktorAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDoktorAd.Location = new System.Drawing.Point(333, 23);
+            this.lblDoktorAd.Name = "lblDoktorAd";
+            this.lblDoktorAd.Size = new System.Drawing.Size(92, 18);
+            this.lblDoktorAd.TabIndex = 12;
+            this.lblDoktorAd.Text = "Gamze Adalı";
             // 
             // button38
             // 
             this.button38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button38.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button38.Location = new System.Drawing.Point(586, 23);
+            this.button38.Location = new System.Drawing.Point(231, 52);
             this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(112, 26);
+            this.button38.Size = new System.Drawing.Size(126, 26);
             this.button38.TabIndex = 103;
-            this.button38.Text = "Randevularım";
+            this.button38.Text = "Randevuları Getir";
             this.button38.UseVisualStyleBackColor = false;
+            this.button38.Click += new System.EventHandler(this.button38_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Gold;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(622, 67);
+            this.button1.Location = new System.Drawing.Point(638, 52);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 26);
             this.button1.TabIndex = 104;
             this.button1.Text = "İlaç Ver";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // Form8
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkCyan;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button2.Location = new System.Drawing.Point(520, 52);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(112, 26);
+            this.button2.TabIndex = 105;
+            this.button2.Text = "Muayene Kaydı";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // CmbDoktorNo
+            // 
+            this.CmbDoktorNo.FormattingEnabled = true;
+            this.CmbDoktorNo.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.CmbDoktorNo.Location = new System.Drawing.Point(134, 55);
+            this.CmbDoktorNo.Name = "CmbDoktorNo";
+            this.CmbDoktorNo.Size = new System.Drawing.Size(91, 21);
+            this.CmbDoktorNo.TabIndex = 107;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(13, 55);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(115, 18);
+            this.label5.TabIndex = 106;
+            this.label5.Text = "Doktor Numara:";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.randevuIdDataGridViewTextBoxColumn,
+            this.doktorIdDataGridViewTextBoxColumn,
+            this.randevuTarihiDataGridViewTextBoxColumn,
+            this.tcNoDataGridViewTextBoxColumn,
+            this.randevuSaatiDataGridViewTextBoxColumn,
+            this.polidDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.randevularBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(24, 107);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(689, 222);
+            this.dataGridView1.TabIndex = 108;
+            // 
+            // hospital_AutomationDataSet2
+            // 
+            this.hospital_AutomationDataSet2.DataSetName = "Hospital_AutomationDataSet2";
+            this.hospital_AutomationDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // randevularBindingSource
+            // 
+            this.randevularBindingSource.DataMember = "Randevular";
+            this.randevularBindingSource.DataSource = this.hospital_AutomationDataSet2;
+            // 
+            // randevularTableAdapter
+            // 
+            this.randevularTableAdapter.ClearBeforeFill = true;
+            // 
+            // randevuIdDataGridViewTextBoxColumn
+            // 
+            this.randevuIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.randevuIdDataGridViewTextBoxColumn.DataPropertyName = "RandevuId";
+            this.randevuIdDataGridViewTextBoxColumn.HeaderText = "RandevuId";
+            this.randevuIdDataGridViewTextBoxColumn.Name = "randevuIdDataGridViewTextBoxColumn";
+            this.randevuIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // doktorIdDataGridViewTextBoxColumn
+            // 
+            this.doktorIdDataGridViewTextBoxColumn.DataPropertyName = "DoktorId";
+            this.doktorIdDataGridViewTextBoxColumn.HeaderText = "DoktorId";
+            this.doktorIdDataGridViewTextBoxColumn.Name = "doktorIdDataGridViewTextBoxColumn";
+            // 
+            // randevuTarihiDataGridViewTextBoxColumn
+            // 
+            this.randevuTarihiDataGridViewTextBoxColumn.DataPropertyName = "RandevuTarihi";
+            this.randevuTarihiDataGridViewTextBoxColumn.HeaderText = "RandevuTarihi";
+            this.randevuTarihiDataGridViewTextBoxColumn.Name = "randevuTarihiDataGridViewTextBoxColumn";
+            // 
+            // tcNoDataGridViewTextBoxColumn
+            // 
+            this.tcNoDataGridViewTextBoxColumn.DataPropertyName = "TcNo";
+            this.tcNoDataGridViewTextBoxColumn.HeaderText = "TcNo";
+            this.tcNoDataGridViewTextBoxColumn.Name = "tcNoDataGridViewTextBoxColumn";
+            // 
+            // randevuSaatiDataGridViewTextBoxColumn
+            // 
+            this.randevuSaatiDataGridViewTextBoxColumn.DataPropertyName = "RandevuSaati";
+            this.randevuSaatiDataGridViewTextBoxColumn.HeaderText = "RandevuSaati";
+            this.randevuSaatiDataGridViewTextBoxColumn.Name = "randevuSaatiDataGridViewTextBoxColumn";
+            // 
+            // polidDataGridViewTextBoxColumn
+            // 
+            this.polidDataGridViewTextBoxColumn.DataPropertyName = "Pol_id";
+            this.polidDataGridViewTextBoxColumn.HeaderText = "Pol_id";
+            this.polidDataGridViewTextBoxColumn.Name = "polidDataGridViewTextBoxColumn";
+            // 
+            // FrmDoktor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(740, 352);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.CmbDoktorNo);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button38);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblDoktorAd);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblPolAd);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tabControl1);
-            this.Name = "Form8";
+            this.Name = "FrmDoktor";
             this.Text = "Doktor Randevu Ekranı";
-            this.tabControl1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.FrmDoktor_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospital_AutomationDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.randevularBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.TabPage tabPage7;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPolAd;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblDoktorAd;
         private System.Windows.Forms.Button button38;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox CmbDoktorNo;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private Hospital_AutomationDataSet2 hospital_AutomationDataSet2;
+        private System.Windows.Forms.BindingSource randevularBindingSource;
+        private Hospital_AutomationDataSet2TableAdapters.RandevularTableAdapter randevularTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn randevuIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn doktorIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn randevuTarihiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tcNoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn randevuSaatiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn polidDataGridViewTextBoxColumn;
     }
 }

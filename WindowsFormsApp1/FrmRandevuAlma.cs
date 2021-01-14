@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
                 {
                     liste .Items.Add(oku.GetString(0).ToString());
                 }
-                veri.ExecuteNonQuery();
+             
                 oku.Close();
                 baglanti.Close();
 
