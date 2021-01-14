@@ -36,28 +36,41 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.CmbPoliklinik = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtTcNo = new System.Windows.Forms.TextBox();
+            this.hospital_AutomationDataSet5 = new WindowsFormsApp1.Hospital_AutomationDataSet5();
+            this.randevularBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.randevularTableAdapter = new WindowsFormsApp1.Hospital_AutomationDataSet5TableAdapters.RandevularTableAdapter();
+            this.hospital_AutomationDataSet6 = new WindowsFormsApp1.Hospital_AutomationDataSet6();
+            this.kullanicilarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kullanicilarTableAdapter = new WindowsFormsApp1.Hospital_AutomationDataSet6TableAdapters.KullanicilarTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.kullaniciIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tcNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soyadiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dogumYeriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cinsiyetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dogumTarihiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.babaAdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anneAdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ePostaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sifreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TxtHstAd = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.hospital_AutomationDataSet5 = new WindowsFormsApp1.Hospital_AutomationDataSet5();
-            this.randevularBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.randevularTableAdapter = new WindowsFormsApp1.Hospital_AutomationDataSet5TableAdapters.RandevularTableAdapter();
-            this.tcNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hospital_AutomationDataSet6 = new WindowsFormsApp1.Hospital_AutomationDataSet6();
-            this.kullanicilarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kullanicilarTableAdapter = new WindowsFormsApp1.Hospital_AutomationDataSet6TableAdapters.KullanicilarTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospital_AutomationDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.randevularBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospital_AutomationDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kullanicilarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -110,6 +123,7 @@
             this.button4.TabIndex = 13;
             this.button4.Text = "Randevu Sil";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -141,37 +155,187 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(18, 158);
+            this.label8.Location = new System.Drawing.Point(28, 159);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 15);
+            this.label8.Size = new System.Drawing.Size(72, 15);
             this.label8.TabIndex = 18;
-            this.label8.Text = "Hasta Adı";
+            this.label8.Text = "Hasta Adı:";
             this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // CmbPoliklinik
-            // 
-            this.CmbPoliklinik.FormattingEnabled = true;
-            this.CmbPoliklinik.Location = new System.Drawing.Point(116, 157);
-            this.CmbPoliklinik.Name = "CmbPoliklinik";
-            this.CmbPoliklinik.Size = new System.Drawing.Size(145, 21);
-            this.CmbPoliklinik.TabIndex = 22;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(267, 159);
+            this.label7.Location = new System.Drawing.Point(377, 160);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(102, 15);
             this.label7.TabIndex = 23;
             this.label7.Text = "T.C. Kimlik No:";
             // 
-            // textBox1
+            // TxtTcNo
             // 
-            this.textBox1.Location = new System.Drawing.Point(375, 158);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 20);
-            this.textBox1.TabIndex = 24;
+            this.TxtTcNo.Location = new System.Drawing.Point(487, 159);
+            this.TxtTcNo.Name = "TxtTcNo";
+            this.TxtTcNo.Size = new System.Drawing.Size(144, 20);
+            this.TxtTcNo.TabIndex = 24;
+            // 
+            // hospital_AutomationDataSet5
+            // 
+            this.hospital_AutomationDataSet5.DataSetName = "Hospital_AutomationDataSet5";
+            this.hospital_AutomationDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // randevularBindingSource
+            // 
+            this.randevularBindingSource.DataMember = "Randevular";
+            this.randevularBindingSource.DataSource = this.hospital_AutomationDataSet5;
+            // 
+            // randevularTableAdapter
+            // 
+            this.randevularTableAdapter.ClearBeforeFill = true;
+            // 
+            // hospital_AutomationDataSet6
+            // 
+            this.hospital_AutomationDataSet6.DataSetName = "Hospital_AutomationDataSet6";
+            this.hospital_AutomationDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // kullanicilarBindingSource
+            // 
+            this.kullanicilarBindingSource.DataMember = "Kullanicilar";
+            this.kullanicilarBindingSource.DataSource = this.hospital_AutomationDataSet6;
+            // 
+            // kullanicilarTableAdapter
+            // 
+            this.kullanicilarTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.kullaniciIdDataGridViewTextBoxColumn,
+            this.tcNoDataGridViewTextBoxColumn,
+            this.adiDataGridViewTextBoxColumn,
+            this.soyadiDataGridViewTextBoxColumn,
+            this.dogumYeriDataGridViewTextBoxColumn,
+            this.cinsiyetDataGridViewTextBoxColumn,
+            this.dogumTarihiDataGridViewTextBoxColumn,
+            this.babaAdiDataGridViewTextBoxColumn,
+            this.anneAdiDataGridViewTextBoxColumn,
+            this.telefonDataGridViewTextBoxColumn,
+            this.ePostaDataGridViewTextBoxColumn,
+            this.sifreDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.kullanicilarBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(28, 199);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(702, 239);
+            this.dataGridView1.TabIndex = 25;
+            // 
+            // kullaniciIdDataGridViewTextBoxColumn
+            // 
+            this.kullaniciIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.kullaniciIdDataGridViewTextBoxColumn.DataPropertyName = "KullaniciId";
+            this.kullaniciIdDataGridViewTextBoxColumn.HeaderText = "KullaniciId";
+            this.kullaniciIdDataGridViewTextBoxColumn.Name = "kullaniciIdDataGridViewTextBoxColumn";
+            this.kullaniciIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tcNoDataGridViewTextBoxColumn
+            // 
+            this.tcNoDataGridViewTextBoxColumn.DataPropertyName = "TcNo";
+            this.tcNoDataGridViewTextBoxColumn.HeaderText = "TcNo";
+            this.tcNoDataGridViewTextBoxColumn.Name = "tcNoDataGridViewTextBoxColumn";
+            // 
+            // adiDataGridViewTextBoxColumn
+            // 
+            this.adiDataGridViewTextBoxColumn.DataPropertyName = "Adi";
+            this.adiDataGridViewTextBoxColumn.HeaderText = "Adi";
+            this.adiDataGridViewTextBoxColumn.Name = "adiDataGridViewTextBoxColumn";
+            // 
+            // soyadiDataGridViewTextBoxColumn
+            // 
+            this.soyadiDataGridViewTextBoxColumn.DataPropertyName = "Soyadi";
+            this.soyadiDataGridViewTextBoxColumn.HeaderText = "Soyadi";
+            this.soyadiDataGridViewTextBoxColumn.Name = "soyadiDataGridViewTextBoxColumn";
+            // 
+            // dogumYeriDataGridViewTextBoxColumn
+            // 
+            this.dogumYeriDataGridViewTextBoxColumn.DataPropertyName = "DogumYeri";
+            this.dogumYeriDataGridViewTextBoxColumn.HeaderText = "DogumYeri";
+            this.dogumYeriDataGridViewTextBoxColumn.Name = "dogumYeriDataGridViewTextBoxColumn";
+            // 
+            // cinsiyetDataGridViewTextBoxColumn
+            // 
+            this.cinsiyetDataGridViewTextBoxColumn.DataPropertyName = "Cinsiyet";
+            this.cinsiyetDataGridViewTextBoxColumn.HeaderText = "Cinsiyet";
+            this.cinsiyetDataGridViewTextBoxColumn.Name = "cinsiyetDataGridViewTextBoxColumn";
+            // 
+            // dogumTarihiDataGridViewTextBoxColumn
+            // 
+            this.dogumTarihiDataGridViewTextBoxColumn.DataPropertyName = "DogumTarihi";
+            this.dogumTarihiDataGridViewTextBoxColumn.HeaderText = "DogumTarihi";
+            this.dogumTarihiDataGridViewTextBoxColumn.Name = "dogumTarihiDataGridViewTextBoxColumn";
+            // 
+            // babaAdiDataGridViewTextBoxColumn
+            // 
+            this.babaAdiDataGridViewTextBoxColumn.DataPropertyName = "BabaAdi";
+            this.babaAdiDataGridViewTextBoxColumn.HeaderText = "BabaAdi";
+            this.babaAdiDataGridViewTextBoxColumn.Name = "babaAdiDataGridViewTextBoxColumn";
+            // 
+            // anneAdiDataGridViewTextBoxColumn
+            // 
+            this.anneAdiDataGridViewTextBoxColumn.DataPropertyName = "AnneAdi";
+            this.anneAdiDataGridViewTextBoxColumn.HeaderText = "AnneAdi";
+            this.anneAdiDataGridViewTextBoxColumn.Name = "anneAdiDataGridViewTextBoxColumn";
+            // 
+            // telefonDataGridViewTextBoxColumn
+            // 
+            this.telefonDataGridViewTextBoxColumn.DataPropertyName = "Telefon";
+            this.telefonDataGridViewTextBoxColumn.HeaderText = "Telefon";
+            this.telefonDataGridViewTextBoxColumn.Name = "telefonDataGridViewTextBoxColumn";
+            // 
+            // ePostaDataGridViewTextBoxColumn
+            // 
+            this.ePostaDataGridViewTextBoxColumn.DataPropertyName = "EPosta";
+            this.ePostaDataGridViewTextBoxColumn.HeaderText = "EPosta";
+            this.ePostaDataGridViewTextBoxColumn.Name = "ePostaDataGridViewTextBoxColumn";
+            // 
+            // sifreDataGridViewTextBoxColumn
+            // 
+            this.sifreDataGridViewTextBoxColumn.DataPropertyName = "Sifre";
+            this.sifreDataGridViewTextBoxColumn.HeaderText = "Sifre";
+            this.sifreDataGridViewTextBoxColumn.Name = "sifreDataGridViewTextBoxColumn";
+            // 
+            // TxtHstAd
+            // 
+            this.TxtHstAd.Location = new System.Drawing.Point(118, 159);
+            this.TxtHstAd.Name = "TxtHstAd";
+            this.TxtHstAd.Size = new System.Drawing.Size(144, 20);
+            this.TxtHstAd.TabIndex = 26;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button7.Location = new System.Drawing.Point(268, 156);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(94, 26);
+            this.button7.TabIndex = 27;
+            this.button7.Text = "Sorgula";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button8.Location = new System.Drawing.Point(637, 155);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(94, 26);
+            this.button8.TabIndex = 28;
+            this.button8.Text = "Sorgula";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // label6
             // 
@@ -246,61 +410,17 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "\r\n";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tcNoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.randevularBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 196);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(706, 141);
-            this.dataGridView1.TabIndex = 25;
-            // 
-            // hospital_AutomationDataSet5
-            // 
-            this.hospital_AutomationDataSet5.DataSetName = "Hospital_AutomationDataSet5";
-            this.hospital_AutomationDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // randevularBindingSource
-            // 
-            this.randevularBindingSource.DataMember = "Randevular";
-            this.randevularBindingSource.DataSource = this.hospital_AutomationDataSet5;
-            // 
-            // randevularTableAdapter
-            // 
-            this.randevularTableAdapter.ClearBeforeFill = true;
-            // 
-            // tcNoDataGridViewTextBoxColumn
-            // 
-            this.tcNoDataGridViewTextBoxColumn.DataPropertyName = "TcNo";
-            this.tcNoDataGridViewTextBoxColumn.HeaderText = "TcNo";
-            this.tcNoDataGridViewTextBoxColumn.Name = "tcNoDataGridViewTextBoxColumn";
-            // 
-            // hospital_AutomationDataSet6
-            // 
-            this.hospital_AutomationDataSet6.DataSetName = "Hospital_AutomationDataSet6";
-            this.hospital_AutomationDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // kullanicilarBindingSource
-            // 
-            this.kullanicilarBindingSource.DataMember = "Kullanicilar";
-            this.kullanicilarBindingSource.DataSource = this.hospital_AutomationDataSet6;
-            // 
-            // kullanicilarTableAdapter
-            // 
-            this.kullanicilarTableAdapter.ClearBeforeFill = true;
-            // 
             // FrmBilgiIslem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(753, 450);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.TxtHstAd);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtTcNo);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.CmbPoliklinik);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label6);
@@ -317,11 +437,11 @@
             this.Name = "FrmBilgiIslem";
             this.Text = "Bilgi İşlem Kontrol Paneli";
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospital_AutomationDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.randevularBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospital_AutomationDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kullanicilarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,16 +461,29 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox CmbPoliklinik;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox TxtTcNo;
         private Hospital_AutomationDataSet5 hospital_AutomationDataSet5;
         private System.Windows.Forms.BindingSource randevularBindingSource;
         private Hospital_AutomationDataSet5TableAdapters.RandevularTableAdapter randevularTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tcNoDataGridViewTextBoxColumn;
         private Hospital_AutomationDataSet6 hospital_AutomationDataSet6;
         private System.Windows.Forms.BindingSource kullanicilarBindingSource;
         private Hospital_AutomationDataSet6TableAdapters.KullanicilarTableAdapter kullanicilarTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kullaniciIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tcNoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soyadiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dogumYeriDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cinsiyetDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dogumTarihiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn babaAdiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn anneAdiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ePostaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sifreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox TxtHstAd;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }

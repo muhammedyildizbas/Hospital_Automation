@@ -59,7 +59,7 @@ namespace WindowsFormsApp1
             catch (Exception)
             {
 
-                MessageBox.Show("Bossati Oku da sorun çıktı");
+               
             }
         }
         public string deger;
