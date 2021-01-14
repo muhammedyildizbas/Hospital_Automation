@@ -50,5 +50,17 @@ namespace WindowsFormsApp1
            
             baglanti.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmMuayeneler frmMuayeneler = new FrmMuayeneler();
+            frmMuayeneler.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmIlacVerme frmIlacVerme = new FrmIlacVerme();
+            frmIlacVerme.Show();
+        }
     }
 }
