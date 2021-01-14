@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -74,22 +74,20 @@
             this.button34 = new System.Windows.Forms.Button();
             this.button35 = new System.Windows.Forms.Button();
             this.button36 = new System.Windows.Forms.Button();
-            this.button37 = new System.Windows.Forms.Button();
             this.button38 = new System.Windows.Forms.Button();
+            this.liste = new System.Windows.Forms.ListBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button39 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // comboBox2
+            // comboBox1
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Diş",
-            "Cildiye",
-            "Noroloji",
-            "KBB"});
-            this.comboBox2.Location = new System.Drawing.Point(256, 35);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(155, 21);
-            this.comboBox2.TabIndex = 55;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(256, 35);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(155, 21);
+            this.comboBox1.TabIndex = 55;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // label10
             // 
@@ -101,18 +99,14 @@
             this.label10.TabIndex = 54;
             this.label10.Text = "Poliklinik Adı:";
             // 
-            // comboBox1
+            // comboBox2
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Melik Tapar",
-            "Zeynep Yıldızbaş",
-            "Nurettin Selvi",
-            "Gamze Adalı"});
-            this.comboBox1.Location = new System.Drawing.Point(256, 79);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(155, 21);
-            this.comboBox1.TabIndex = 57;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(256, 79);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(155, 21);
+            this.comboBox2.TabIndex = 57;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged_1);
             // 
             // label1
             // 
@@ -157,6 +151,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(152, 20);
             this.dateTimePicker1.TabIndex = 61;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
             // 
             // label4
             // 
@@ -170,35 +165,37 @@
             // 
             // textBox2
             // 
-            this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(258, 207);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(153, 20);
             this.textBox2.TabIndex = 63;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Red;
+            this.button2.BackColor = System.Drawing.Color.Lime;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(15, 298);
+            this.button2.Location = new System.Drawing.Point(99, 298);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(66, 25);
             this.button2.TabIndex = 64;
-            this.button2.Text = "09:00";
+            this.button2.Text = "09:10";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Lime;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(99, 298);
+            this.button1.Location = new System.Drawing.Point(15, 298);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(66, 25);
             this.button1.TabIndex = 65;
-            this.button1.Text = "09:10";
+            this.button1.Text = "09:00";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button3
             // 
@@ -211,6 +208,7 @@
             this.button3.TabIndex = 66;
             this.button3.Text = "09:20";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button4
             // 
@@ -223,6 +221,7 @@
             this.button4.TabIndex = 67;
             this.button4.Text = "09:30";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // button5
             // 
@@ -235,6 +234,7 @@
             this.button5.TabIndex = 68;
             this.button5.Text = "09:40";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // button6
             // 
@@ -247,10 +247,11 @@
             this.button6.TabIndex = 69;
             this.button6.Text = "09:50";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.Red;
+            this.button7.BackColor = System.Drawing.Color.Lime;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button7.Location = new System.Drawing.Point(421, 329);
@@ -259,6 +260,7 @@
             this.button7.TabIndex = 75;
             this.button7.Text = "10:50";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // button8
             // 
@@ -271,6 +273,7 @@
             this.button8.TabIndex = 74;
             this.button8.Text = "10:40";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click_1);
             // 
             // button9
             // 
@@ -287,7 +290,7 @@
             // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.Color.Red;
+            this.button10.BackColor = System.Drawing.Color.Lime;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button10.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button10.Location = new System.Drawing.Point(180, 329);
@@ -296,6 +299,7 @@
             this.button10.TabIndex = 72;
             this.button10.Text = "10:20";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click_1);
             // 
             // button11
             // 
@@ -308,6 +312,7 @@
             this.button11.TabIndex = 71;
             this.button11.Text = "10:10";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click_1);
             // 
             // button12
             // 
@@ -320,6 +325,7 @@
             this.button12.TabIndex = 70;
             this.button12.Text = "10:00";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click_1);
             // 
             // button13
             // 
@@ -332,6 +338,7 @@
             this.button13.TabIndex = 81;
             this.button13.Text = "11:50";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click_1);
             // 
             // button14
             // 
@@ -344,10 +351,11 @@
             this.button14.TabIndex = 80;
             this.button14.Text = "11:40";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click_1);
             // 
             // button15
             // 
-            this.button15.BackColor = System.Drawing.Color.Red;
+            this.button15.BackColor = System.Drawing.Color.Lime;
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button15.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button15.Location = new System.Drawing.Point(258, 369);
@@ -356,6 +364,7 @@
             this.button15.TabIndex = 79;
             this.button15.Text = "11:30";
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click_1);
             // 
             // button16
             // 
@@ -368,10 +377,11 @@
             this.button16.TabIndex = 78;
             this.button16.Text = "11:20";
             this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.button16_Click_1);
             // 
             // button17
             // 
-            this.button17.BackColor = System.Drawing.Color.Red;
+            this.button17.BackColor = System.Drawing.Color.Lime;
             this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button17.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button17.Location = new System.Drawing.Point(99, 369);
@@ -380,6 +390,7 @@
             this.button17.TabIndex = 77;
             this.button17.Text = "11:10";
             this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click_1);
             // 
             // button18
             // 
@@ -392,10 +403,11 @@
             this.button18.TabIndex = 76;
             this.button18.Text = "11:00";
             this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.button18_Click_1);
             // 
             // button19
             // 
-            this.button19.BackColor = System.Drawing.Color.Red;
+            this.button19.BackColor = System.Drawing.Color.Lime;
             this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button19.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button19.Location = new System.Drawing.Point(421, 403);
@@ -404,6 +416,7 @@
             this.button19.TabIndex = 87;
             this.button19.Text = "13:50";
             this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click_1);
             // 
             // button20
             // 
@@ -416,6 +429,7 @@
             this.button20.TabIndex = 86;
             this.button20.Text = "13:40";
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click_1);
             // 
             // button21
             // 
@@ -428,6 +442,7 @@
             this.button21.TabIndex = 85;
             this.button21.Text = "13:30";
             this.button21.UseVisualStyleBackColor = false;
+            this.button21.Click += new System.EventHandler(this.button21_Click_1);
             // 
             // button22
             // 
@@ -440,6 +455,7 @@
             this.button22.TabIndex = 84;
             this.button22.Text = "13:20";
             this.button22.UseVisualStyleBackColor = false;
+            this.button22.Click += new System.EventHandler(this.button22_Click_1);
             // 
             // button23
             // 
@@ -452,6 +468,7 @@
             this.button23.TabIndex = 83;
             this.button23.Text = "13:10";
             this.button23.UseVisualStyleBackColor = false;
+            this.button23.Click += new System.EventHandler(this.button23_Click_1);
             // 
             // button24
             // 
@@ -464,6 +481,7 @@
             this.button24.TabIndex = 82;
             this.button24.Text = "13:00";
             this.button24.UseVisualStyleBackColor = false;
+            this.button24.Click += new System.EventHandler(this.button24_Click_1);
             // 
             // button25
             // 
@@ -476,6 +494,7 @@
             this.button25.TabIndex = 93;
             this.button25.Text = "14:50";
             this.button25.UseVisualStyleBackColor = false;
+            this.button25.Click += new System.EventHandler(this.button25_Click_1);
             // 
             // button26
             // 
@@ -488,6 +507,7 @@
             this.button26.TabIndex = 92;
             this.button26.Text = "14:40";
             this.button26.UseVisualStyleBackColor = false;
+            this.button26.Click += new System.EventHandler(this.button26_Click_1);
             // 
             // button27
             // 
@@ -500,10 +520,11 @@
             this.button27.TabIndex = 91;
             this.button27.Text = "14:30";
             this.button27.UseVisualStyleBackColor = false;
+            this.button27.Click += new System.EventHandler(this.button27_Click_1);
             // 
             // button28
             // 
-            this.button28.BackColor = System.Drawing.Color.Red;
+            this.button28.BackColor = System.Drawing.Color.Lime;
             this.button28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button28.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button28.Location = new System.Drawing.Point(180, 434);
@@ -512,10 +533,11 @@
             this.button28.TabIndex = 90;
             this.button28.Text = "14:20";
             this.button28.UseVisualStyleBackColor = false;
+            this.button28.Click += new System.EventHandler(this.button28_Click_1);
             // 
             // button29
             // 
-            this.button29.BackColor = System.Drawing.Color.Red;
+            this.button29.BackColor = System.Drawing.Color.Lime;
             this.button29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button29.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button29.Location = new System.Drawing.Point(99, 434);
@@ -524,6 +546,7 @@
             this.button29.TabIndex = 89;
             this.button29.Text = "14:10";
             this.button29.UseVisualStyleBackColor = false;
+            this.button29.Click += new System.EventHandler(this.button29_Click_1);
             // 
             // button30
             // 
@@ -536,6 +559,7 @@
             this.button30.TabIndex = 88;
             this.button30.Text = "14:00";
             this.button30.UseVisualStyleBackColor = false;
+            this.button30.Click += new System.EventHandler(this.button30_Click_1);
             // 
             // button31
             // 
@@ -548,6 +572,7 @@
             this.button31.TabIndex = 99;
             this.button31.Text = "15:50";
             this.button31.UseVisualStyleBackColor = false;
+            this.button31.Click += new System.EventHandler(this.button31_Click_1);
             // 
             // button32
             // 
@@ -560,10 +585,11 @@
             this.button32.TabIndex = 98;
             this.button32.Text = "15:40";
             this.button32.UseVisualStyleBackColor = false;
+            this.button32.Click += new System.EventHandler(this.button32_Click_1);
             // 
             // button33
             // 
-            this.button33.BackColor = System.Drawing.Color.Red;
+            this.button33.BackColor = System.Drawing.Color.Lime;
             this.button33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button33.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button33.Location = new System.Drawing.Point(258, 468);
@@ -572,6 +598,7 @@
             this.button33.TabIndex = 97;
             this.button33.Text = "15:30";
             this.button33.UseVisualStyleBackColor = false;
+            this.button33.Click += new System.EventHandler(this.button33_Click_1);
             // 
             // button34
             // 
@@ -584,6 +611,7 @@
             this.button34.TabIndex = 96;
             this.button34.Text = "15:20";
             this.button34.UseVisualStyleBackColor = false;
+            this.button34.Click += new System.EventHandler(this.button34_Click_1);
             // 
             // button35
             // 
@@ -596,6 +624,7 @@
             this.button35.TabIndex = 95;
             this.button35.Text = "15:10";
             this.button35.UseVisualStyleBackColor = false;
+            this.button35.Click += new System.EventHandler(this.button35_Click_1);
             // 
             // button36
             // 
@@ -608,18 +637,7 @@
             this.button36.TabIndex = 94;
             this.button36.Text = "15:00";
             this.button36.UseVisualStyleBackColor = false;
-            // 
-            // button37
-            // 
-            this.button37.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button37.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button37.Location = new System.Drawing.Point(261, 245);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(83, 41);
-            this.button37.TabIndex = 100;
-            this.button37.Text = "Randevu Al";
-            this.button37.UseVisualStyleBackColor = false;
+            this.button36.Click += new System.EventHandler(this.button36_Click_1);
             // 
             // button38
             // 
@@ -632,14 +650,48 @@
             this.button38.TabIndex = 101;
             this.button38.Text = "  İptal ";
             this.button38.UseVisualStyleBackColor = false;
+            this.button38.Click += new System.EventHandler(this.button38_Click);
             // 
-            // Form5
+            // liste
+            // 
+            this.liste.FormattingEnabled = true;
+            this.liste.Location = new System.Drawing.Point(479, 83);
+            this.liste.Name = "liste";
+            this.liste.Size = new System.Drawing.Size(35, 17);
+            this.liste.TabIndex = 102;
+            this.liste.Visible = false;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(479, 60);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(35, 17);
+            this.listBox1.TabIndex = 103;
+            this.listBox1.Visible = false;
+            // 
+            // button39
+            // 
+            this.button39.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button39.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button39.Location = new System.Drawing.Point(256, 245);
+            this.button39.Name = "button39";
+            this.button39.Size = new System.Drawing.Size(92, 40);
+            this.button39.TabIndex = 105;
+            this.button39.Text = "Randevu Al";
+            this.button39.UseVisualStyleBackColor = false;
+            this.button39.Click += new System.EventHandler(this.button39_Click);
+            // 
+            // FrmRandevuAlma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(499, 502);
+            this.Controls.Add(this.button39);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.liste);
             this.Controls.Add(this.button38);
-            this.Controls.Add(this.button37);
             this.Controls.Add(this.button31);
             this.Controls.Add(this.button32);
             this.Controls.Add(this.button33);
@@ -682,11 +734,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label10);
-            this.Name = "Form5";
+            this.Name = "FrmRandevuAlma";
             this.Text = "Randevu Alma";
             this.Load += new System.EventHandler(this.Form5_Load);
             this.ResumeLayout(false);
@@ -696,9 +748,9 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
@@ -742,7 +794,9 @@
         private System.Windows.Forms.Button button34;
         private System.Windows.Forms.Button button35;
         private System.Windows.Forms.Button button36;
-        private System.Windows.Forms.Button button37;
         private System.Windows.Forms.Button button38;
+        private System.Windows.Forms.ListBox liste;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button39;
     }
 }

@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtYeniSifreTekrar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtYeniSifre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtTcNo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button38 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox3
+            // TxtYeniSifreTekrar
             // 
-            this.textBox3.Location = new System.Drawing.Point(191, 114);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(153, 20);
-            this.textBox3.TabIndex = 12;
+            this.TxtYeniSifreTekrar.Location = new System.Drawing.Point(191, 114);
+            this.TxtYeniSifreTekrar.Name = "TxtYeniSifreTekrar";
+            this.TxtYeniSifreTekrar.Size = new System.Drawing.Size(153, 20);
+            this.TxtYeniSifreTekrar.TabIndex = 12;
             // 
             // label3
             // 
@@ -55,12 +55,12 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Şifre Tekrar:";
             // 
-            // textBox2
+            // TxtYeniSifre
             // 
-            this.textBox2.Location = new System.Drawing.Point(190, 77);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(153, 20);
-            this.textBox2.TabIndex = 10;
+            this.TxtYeniSifre.Location = new System.Drawing.Point(190, 77);
+            this.TxtYeniSifre.Name = "TxtYeniSifre";
+            this.TxtYeniSifre.Size = new System.Drawing.Size(153, 20);
+            this.TxtYeniSifre.TabIndex = 10;
             // 
             // label2
             // 
@@ -72,12 +72,12 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Şifre:";
             // 
-            // textBox1
+            // TxtTcNo
             // 
-            this.textBox1.Location = new System.Drawing.Point(190, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 20);
-            this.textBox1.TabIndex = 8;
+            this.TxtTcNo.Location = new System.Drawing.Point(190, 32);
+            this.TxtTcNo.Name = "TxtTcNo";
+            this.TxtTcNo.Size = new System.Drawing.Size(153, 20);
+            this.TxtTcNo.TabIndex = 8;
             // 
             // label1
             // 
@@ -100,6 +100,7 @@
             this.button38.TabIndex = 102;
             this.button38.Text = "Değiştir";
             this.button38.UseVisualStyleBackColor = false;
+            this.button38.Click += new System.EventHandler(this.button38_Click);
             // 
             // button1
             // 
@@ -113,21 +114,21 @@
             this.button1.Text = "Yeni Kullanıcı Ekle";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // Form6
+            // FrmBilgiIslemKullanici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 185);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button38);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.TxtYeniSifreTekrar);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TxtYeniSifre);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtTcNo);
             this.Controls.Add(this.label1);
-            this.Name = "Form6";
-            this.Text = "Bilgi İşlem Kullanıcı";
+            this.Name = "FrmBilgiIslemKullanici";
+            this.Text = "Bilgi İşlem Şifre Değiştirme";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,11 +136,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxtYeniSifreTekrar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtYeniSifre;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtTcNo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button38;
         private System.Windows.Forms.Button button1;
