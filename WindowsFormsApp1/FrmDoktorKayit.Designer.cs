@@ -290,6 +290,7 @@
             this.CmbPoliklinikAdi.Name = "CmbPoliklinikAdi";
             this.CmbPoliklinikAdi.Size = new System.Drawing.Size(155, 21);
             this.CmbPoliklinikAdi.TabIndex = 53;
+            this.CmbPoliklinikAdi.SelectedIndexChanged += new System.EventHandler(this.CmbPoliklinikAdi_SelectedIndexChanged);
             // 
             // label10
             // 
