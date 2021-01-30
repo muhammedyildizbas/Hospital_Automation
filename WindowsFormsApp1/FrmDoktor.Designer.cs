@@ -39,18 +39,18 @@
             this.CmbDoktorNo = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.hospital_AutomationDataSet2 = new WindowsFormsApp1.Hospital_AutomationDataSet2();
-            this.randevularBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.randevularTableAdapter = new WindowsFormsApp1.Hospital_AutomationDataSet2TableAdapters.RandevularTableAdapter();
             this.randevuIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doktorIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.randevuTarihiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tcNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.randevuSaatiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.polidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.randevularBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospital_AutomationDataSet2 = new WindowsFormsApp1.Hospital_AutomationDataSet2();
+            this.randevularTableAdapter = new WindowsFormsApp1.Hospital_AutomationDataSet2TableAdapters.RandevularTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospital_AutomationDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.randevularBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospital_AutomationDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -136,11 +136,15 @@
             this.CmbDoktorNo.Items.AddRange(new object[] {
             "1",
             "2",
-            "3"});
+            "3",
+            "4",
+            "5",
+            "6"});
             this.CmbDoktorNo.Location = new System.Drawing.Point(134, 55);
             this.CmbDoktorNo.Name = "CmbDoktorNo";
             this.CmbDoktorNo.Size = new System.Drawing.Size(91, 21);
             this.CmbDoktorNo.TabIndex = 107;
+            this.CmbDoktorNo.SelectedIndexChanged += new System.EventHandler(this.CmbDoktorNo_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -168,20 +172,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(689, 222);
             this.dataGridView1.TabIndex = 108;
-            // 
-            // hospital_AutomationDataSet2
-            // 
-            this.hospital_AutomationDataSet2.DataSetName = "Hospital_AutomationDataSet2";
-            this.hospital_AutomationDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // randevularBindingSource
-            // 
-            this.randevularBindingSource.DataMember = "Randevular";
-            this.randevularBindingSource.DataSource = this.hospital_AutomationDataSet2;
-            // 
-            // randevularTableAdapter
-            // 
-            this.randevularTableAdapter.ClearBeforeFill = true;
             // 
             // randevuIdDataGridViewTextBoxColumn
             // 
@@ -221,6 +211,20 @@
             this.polidDataGridViewTextBoxColumn.HeaderText = "Pol_id";
             this.polidDataGridViewTextBoxColumn.Name = "polidDataGridViewTextBoxColumn";
             // 
+            // randevularBindingSource
+            // 
+            this.randevularBindingSource.DataMember = "Randevular";
+            this.randevularBindingSource.DataSource = this.hospital_AutomationDataSet2;
+            // 
+            // hospital_AutomationDataSet2
+            // 
+            this.hospital_AutomationDataSet2.DataSetName = "Hospital_AutomationDataSet2";
+            this.hospital_AutomationDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // randevularTableAdapter
+            // 
+            this.randevularTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmDoktor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,8 +244,8 @@
             this.Text = "Doktor Randevu Ekranı";
             this.Load += new System.EventHandler(this.FrmDoktor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospital_AutomationDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.randevularBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospital_AutomationDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

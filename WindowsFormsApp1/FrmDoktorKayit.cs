@@ -124,5 +124,11 @@ namespace WindowsFormsApp1
             MessageBox.Show("Kayit Silindi");
 
         }
+        public int pol_id;
+
+        private void CmbPoliklinikAdi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

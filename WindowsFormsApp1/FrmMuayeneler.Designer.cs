@@ -125,7 +125,9 @@
             "1",
             "2",
             "3",
-            "4"});
+            "4",
+            "5",
+            "6"});
             this.CmbDoktorId.Location = new System.Drawing.Point(156, 46);
             this.CmbDoktorId.Name = "CmbDoktorId";
             this.CmbDoktorId.Size = new System.Drawing.Size(91, 21);

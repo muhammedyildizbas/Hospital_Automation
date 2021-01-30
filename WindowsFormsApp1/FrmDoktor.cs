@@ -62,5 +62,10 @@ namespace WindowsFormsApp1
             FrmIlacVerme frmIlacVerme = new FrmIlacVerme();
             frmIlacVerme.Show();
         }
+
+        private void CmbDoktorNo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
